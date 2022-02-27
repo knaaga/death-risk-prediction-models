@@ -47,8 +47,8 @@ def prob_drop(age):
 
 def nhanesi(display=False):
     """Same as shap, but we use local data."""
-    X = pd.read_csv(os.path.join(__location__, 'NHANESI_subset_X.csv'))
-    y = pd.read_csv(os.path.join(__location__, 'NHANESI_subset_y.csv'))["y"]
+    X = pd.read_csv('/Data/NHANESI_subset_X.csv')
+    y = pd.read_csv('/Data/NHANESI_subset_Y.csv')["y"]
     if display:
         X_display = X.copy()
         X_display["Sex"] = ["Male" if v == 1 else "Female" for v in X["Sex"]]
